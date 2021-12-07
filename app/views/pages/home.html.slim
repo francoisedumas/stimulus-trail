@@ -24,13 +24,22 @@ p.text-center.mb-10
   .mb-5 data-form-submit-target="day" = @selected_date
 
 .flex.flex-col.border-solid.border-white.border-8.mb-5.pb-5
-  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5 Day-3 Build a clock
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5.w-full Day-3 Build a clock
   .clock-body
     .clock
       .clock-face data = { controller: "clock"}
         .hand.hour-hand data = { "clock-target":"hourHand" }
         .hand.min-hand data = { "clock-target":"minHand" }
         .hand.second-hand data = { "clock-target":"secondHand" }
+
+.flex.flex-col.justify-center.items-center.border-solid.border-white.border-8.mb-5.pb-5 data-controller="togglelist"
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5.w-full Day-4 The classic toggle
+  button type="button" data-action="click->togglelist#toggle" Click me to open
+
+  ol.element-toggle data-togglelist-target="list"
+    li.px-6.py-4.text-center.bg-blue-300 Blue
+    li.px-6.py-4.text-center.bg-red-300 Red
+    li.px-6.py-4.text-center.bg-green-300 Green
 
 footer.flex.flex-row.justify-around.w-full.mx-0.my-auto.p-10
     a href="https://github.com/francoisedumas" alt="Github" target="_blank"
