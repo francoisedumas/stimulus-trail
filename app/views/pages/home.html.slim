@@ -22,3 +22,12 @@ p.text-center.mb-10
         params[:date],
         data: { action: "change->form-submit#handleChange" }
   .mb-5 data-form-submit-target="day" = @selected_date
+
+.flex.flex-col.border-solid.border-white.border-8.mb-5.pb-5
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5 Day-3 Build a clock
+  .clock-body
+    .clock
+      .clock-face data = { controller: "clock"}
+        .hand.hour-hand data = { "clock-target":"hourHand" }
+        .hand.min-hand data = { "clock-target":"minHand" }
+        .hand.second-hand data = { "clock-target":"secondHand" }
