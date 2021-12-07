@@ -1,9 +1,16 @@
 h1.text-5xl.font-bold.text-center.mt-2.mb-20 Welcome to your Stimulus trail!
 
-p.text-center
+p.text-center.mb-10
   | Find almost 30 exemples of Stimulus real application! Get the code on the repo
   | &nbsp;
   a href="https://github.com/francoisedumas/stimulus-trail" alt="Github" target="_blank"
     i class="fab fa-github"
   | &nbsp;
   | here!
+
+flex.flex-col.items-center.border-solid.border-white.border-8.mb-5.pb-5
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5 Day-1 Change on click
+  = content_tag :div, nil, data: {controller: "hello"} do
+    h3.text-center.text-2xl.font-bold.pt-2.pb-2.mb-5 data-hello-target="heading" This the first exercise
+    .flex.justify-center.items-center
+      .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-5.mb-5.cursor-pointer.w-2/5 data-action="click->hello#greet" Click me to change the title
