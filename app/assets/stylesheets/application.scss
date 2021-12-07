@@ -1,0 +1,15 @@
+@import "pages/index";
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body,html {
+  margin: 0;
+  padding: 0;
+  background-color: #fbf7f0;
+  font-family: "courier", monospace;
+  letter-spacing: 2px;
+}
