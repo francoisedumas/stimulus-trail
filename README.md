@@ -42,6 +42,10 @@ Create a file `tailwind.config.js`
 
 # Deploying with Heroku
 
+## Solving issue with Sqlite3
+
+If using Sqlite3 you have the next error with Heroku `Detected sqlite3 gem which is not supported on Heroku:` To solve it follow the [article here](https://devcenter.heroku.com/articles/sqlite3) or [article here](https://www.codecademy.com/articles/deploy-rails-to-heroku)
+
 ## Solving issue with Gemfile.lock
 I had issues with the Gemfile.lock and with the next error
 ```
@@ -53,10 +57,8 @@ platform is x86_64-linux. Add the current platform to the lockfile with
 It's been solved by removing my Gemfile, bundling and running `bundle lock --add-platform x86_64-linux`
 [A good article about it here](https://www.moncefbelyamani.com/understanding-the-gemfile-lock-file/)
 
-## Solving issue with Sqlite3
-
-I am not using any DB in this exercise so no issue with Sqlite3 ;)
 
 ### Deploy & migrate
 
 Now run `git push heroku master `
+If you face some issue you can try `heroku run rails console` to find out more
