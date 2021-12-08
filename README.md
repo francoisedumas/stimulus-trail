@@ -58,7 +58,7 @@ It's been solved by removing my Gemfile, bundling and running `bundle lock --add
 [A good article about it here](https://www.moncefbelyamani.com/understanding-the-gemfile-lock-file/)
 
 
-### Deploy & migrate
+## Deploy & migrate
 
 Now run `git push heroku master `
 If you face some issue you can try `heroku run rails console` to find out more
