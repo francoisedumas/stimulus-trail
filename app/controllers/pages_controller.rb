@@ -5,5 +5,7 @@ class PagesController < ApplicationController
     else
       @selected_date = "Select a day"
     end
+
+    @vegetables = ["carrot", "seedling", "lemon"]
   end
 end
