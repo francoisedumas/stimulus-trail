@@ -41,6 +41,38 @@ p.text-center.mb-10
     li.px-6.py-4.text-center.bg-red-300 Red
     li.px-6.py-4.text-center.bg-green-300 Green
 
+.flex.flex-col.border-solid.border-white.border-8.mb-5
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2 Day-5 Build a drum
+  .drum
+    .keys
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"clap.wav", "drum-key-value":65}
+        kbd A
+        span class="sound" clap
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"hihat.wav", "drum-key-value":83}
+        kbd S
+        span class="sound" hihat
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"kick.wav", "drum-key-value":68}
+        kbd D
+        span class="sound" kick
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"openhat.wav", "drum-key-value":70}
+        kbd F
+        span class="sound" openhat
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"boom.wav", "drum-key-value":71}
+        kbd G
+        span class="sound" boom
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"ride.wav", "drum-key-value":72}
+        kbd H
+        span class="sound" ride
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"snare.wav", "drum-key-value":74}
+        kbd J
+        span class="sound" snare
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"tom.wav", "drum-key-value":75}
+        kbd K
+        span class="sound" tom
+      .key data = { controller: "drum", action:"click->drum#play keydown@window->drum#playKeyboard", "drum-sound-value":"tink.wav", "drum-key-value":76}
+        kbd L
+        span class="sound" tink
+
 footer.flex.flex-row.justify-around.w-full.mx-0.my-auto.p-10
     a href="https://github.com/francoisedumas" alt="Github" target="_blank"
       i class="fab fa-github"
