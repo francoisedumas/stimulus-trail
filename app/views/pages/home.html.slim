@@ -126,6 +126,20 @@ p.text-center.mb-10
     button data-action="clipboard#copy" class="ml-3" Copy to Clipboard
   input class="w-1/4 px-4 text-gray-900 rounded-sm mx-auto flex flex-row justify-center" placeholder="Paste here to test it"
 
+.flex.flex-col.border-solid.border-white.border-8.mb-5.pb-5
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5 Day-10 Gross and net
+  = form_tag root_path, method: :get, data: { controller: "gross-net" } do
+    .flex.flex-row.justify-center.items-center
+      .mr-10
+        label.mr-2 Gross amount
+        = text_field_tag(:gross_amount, nil, placeholder:"Enter amount", data: { "gross-net-target": "grossAmount", action: "change->gross-net#updateNetAmount" })
+      .mr-10
+        label.mr-2 Deduction amount
+        = text_field_tag(:deduction_amount, nil, placeholder:"Enter amount", data: { "gross-net-target": "deductionAmount", action: "change->gross-net#updateNetAmount" })
+      .mr-10
+        label.mr-2 Net amount
+        = text_field_tag(:net_amount, nil, placeholder:"Correct amount", data: {  "gross-net-target": "netAmount", action: "change->gross-net#updateDeductionAmount" })
+
 .border-t-2.border-black.border-dashed.mb-3.mt-3
 
 footer.flex.flex-row.justify-around.w-full.mx-0.my-auto.p-10
