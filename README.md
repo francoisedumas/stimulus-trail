@@ -40,6 +40,11 @@ In your terminal
 `rails tailwindcss:install`
 Create a file `tailwind.config.js`
 
+# Sweetalert setup
+
+In your terminal
+`yarn add sweetalert2`
+
 # Deploying with Heroku
 
 ## Solving issue with Sqlite3
