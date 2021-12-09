@@ -14,7 +14,7 @@ p.text-center.mb-10
   h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5.w-full Day-1 Change on click
   = content_tag :div, nil, data: {controller: "hello"} do
     h3.text-center.text-2xl.font-bold.pt-2.pb-2.mb-5 data-hello-target="heading" This the first exercise
-    .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-5.mb-5.cursor-pointer data-action="click->hello#greet" Click me to change the title
+    .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-3.mb-5.cursor-pointer.rounded-md data-action="click->hello#greet" Click me to change the title
 
 .flex.flex-col.items-center.border-solid.border-white.border-8.mb-5.pb-5
   h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5.w-full Day-2 Submit on change
@@ -139,6 +139,13 @@ p.text-center.mb-10
       .mr-10
         label.mr-2 Net amount
         = text_field_tag(:net_amount, nil, placeholder:"Correct amount", data: {  "gross-net-target": "netAmount", action: "change->gross-net#updateDeductionAmount" })
+
+.flex.flex-col.items-center.border-solid.border-white.border-8.mb-5.pb-5 data = { controller: 'auto-popup',
+                      "auto-popup-title-value": "My Amazing Title",
+                      "auto-popup-ok-value": "ok",
+                      "auto-popup-main-text-value": "A catchy tagline!"}
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5.w-full Day-11 Pop up
+  .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-3.mb-5.cursor-pointer.rounded-md data-action="auto-popup#confirmBeforeSubmit" Make it pop
 
 .border-t-2.border-black.border-dashed.mb-3.mt-3
 
