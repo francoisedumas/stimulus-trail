@@ -45,6 +45,11 @@ Create a file `tailwind.config.js`
 In your terminal
 `yarn add sweetalert2`
 
+# SortableJS setup
+
+In your terminal
+`yarn add sortablejs`
+
 # Deploying with Heroku
 
 ## Solving issue with Sqlite3
