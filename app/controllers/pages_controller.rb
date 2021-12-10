@@ -7,5 +7,6 @@ class PagesController < ApplicationController
     end
 
     @vegetables = ["carrot", "seedling", "lemon"]
+    @animals = ["horse", "frog", "cat"]
   end
 end
