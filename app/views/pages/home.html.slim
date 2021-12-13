@@ -179,6 +179,13 @@ p.text-center.mb-10
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-vertical" class="h-5 w-5 mr-2 drag-handler cursor-pointer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M96 32H32C14.33 32 0 46.33 0 64v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zm0 160H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm0 160H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zM288 32h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zm0 160h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm0 160h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z"></path></svg>
                     | Me too, you can drag me
 
+.flex.flex-col.border-solid.border-white.border-8.mb-5.pb-5 data = { controller: "counter", "counter-level-value": 1 }
+  h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2.mb-5 Day-14 Counter
+  h3.text-center.text-2xl.font-bold.pt-2.pb-2.mb-5 data-counter-target="counter" 1
+  .flex.flex-row.justify-center.mb-5
+      .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-3.mr-5.cursor-pointer.rounded-md data-action="click->counter#increment" Increment
+      .text-center.text-white.bg-black.hover:bg-white.hover:text-black.text-sm.p-3.ml-5.cursor-pointer.rounded-md data-action="click->counter#decrement" Decrement
+
 .border-t-2.border-black.border-dashed.mb-3.mt-3
 
 footer.flex.flex-row.justify-around.w-full.mx-0.my-auto.p-10
