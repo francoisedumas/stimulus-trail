@@ -5,10 +5,10 @@ Find almost 30 exemples of Stimulus real application!
 
 # Rails new and HP setup
 
-In your terminal run
-`rails new stimulus-trail --skip-active-storage --skip-action-mailbox`
-`rails generate controller pages`
-In the `app/config/routes.rb` file add the HP route
+In your terminal run \
+`rails new stimulus-trail --skip-active-storage --skip-action-mailbox` \
+`rails generate controller pages` \
+In the `app/config/routes.rb` file add the HP route \
 Add below action to your pages controller
 ```ruby
   def home
@@ -18,34 +18,34 @@ Create the file `app/views/home.html.erb` and you're good to go
 
 # Setup scss
 
-`rm app/assets/stylesheets/application.css`
+`rm app/assets/stylesheets/application.css` \
 `touch app/assets/stylesheets/application.scss`
 
 # Stimulus setup
 
-In your terminal
+In your terminal \
 `rails webpacker:install:stimulus`
 
 # Slim & Fontawesome setup
 
-Add to the Gemfile
-`gem "slim-rails"`
-`gem 'font-awesome-sass', '~> 5.6.1'`
+Add to the Gemfile \
+`gem "slim-rails"` \
+`gem 'font-awesome-sass', '~> 5.6.1'` \
 Then run `bundle` in your terminal. That's it!
 
 # Tailwind setup
 
-In your terminal (to start easy)
+In your terminal (to start easy by just writting Tailwind in your HTML) \
 `bundle add tailwindcss-rails`
-`rails tailwindcss:install`
-Create a file `tailwind.config.js`
-In your terminal to add it as JS
-`yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
-In the file postcss.config.js along the other require add
-`require('tailwindcss'), require('autoprefixer')`
-In the application.js file add below line to import you stylesheets nested in javascript folder
-`import '../stylesheets/application.scss'`
-Add a folder `stylesheets` in the JS repository `app/javascript/stylesheets` and add an `application.scss` file.
+`rails tailwindcss:install` \
+
+In your terminal to add it as JS \
+`yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9` \
+In the file postcss.config.js along the other require add \
+`require('tailwindcss'), require('autoprefixer')` \
+In the application.js file add below line to import you stylesheets nested in javascript folder \
+`import '../stylesheets/application.scss'` \
+Add a folder `stylesheets` in the JS repository `app/javascript/stylesheets` and add an `application.scss` file. \
 Add next line to the file
 ```
 @import "tailwindcss/base.css";
@@ -61,12 +61,12 @@ Make sure you have the below lines in the header of your `application.html.erb` 
 
 # Sweetalert setup
 
-In your terminal
+In your terminal \
 `yarn add sweetalert2`
 
 # SortableJS setup
 
-In your terminal
+In your terminal \
 `yarn add sortablejs`
 
 # Deploying with Heroku
@@ -89,5 +89,5 @@ It's been solved by removing my Gemfile, bundling and running `bundle lock --add
 
 ## Deploy & migrate
 
-Now run `git push heroku master`
+Now run `git push heroku master` \
 If you face some issue you can try `heroku run rails console` to find out more
