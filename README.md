@@ -35,10 +35,29 @@ Then run `bundle` in your terminal. That's it!
 
 # Tailwind setup
 
-In your terminal
+In your terminal (to start easy)
 `bundle add tailwindcss-rails`
 `rails tailwindcss:install`
 Create a file `tailwind.config.js`
+In your terminal to add it as JS
+`yarn add tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
+In the file postcss.config.js along the other require add
+`require('tailwindcss'), require('autoprefixer')`
+In the application.js file add below line to import you stylesheets nested in javascript folder
+`import '../stylesheets/application.scss'`
+Add a folder `stylesheets` in the JS repository `app/javascript/stylesheets` and add an `application.scss` file.
+Add next line to the file
+```
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+```
+Add your Tailwind customed class in this new file
+Make sure you have the below lines in the header of your `application.html.erb` or `application.html.slim`
+```
+<%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+```
 
 # Sweetalert setup
 
