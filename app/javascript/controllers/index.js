@@ -6,9 +6,11 @@ import { definitionsFromContext } from "stimulus/webpack-helpers"
 
 // Here we import the plugins
 import Lightbox from "stimulus-lightbox"
+import { Autocomplete } from "stimulus-autocomplete"
 
 const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
 // Here you call the plugins
 application.register("lightbox", Lightbox)
+application.register("autocomplete", Autocomplete)

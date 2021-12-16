@@ -9,4 +9,9 @@ class PagesController < ApplicationController
     @vegetables = ["carrot", "seedling", "lemon"]
     @animals = ["horse", "frog", "cat"]
   end
+
+  def autocomplete
+    @search_results = ["apple", "apple juice", "apple compote"]
+    render layout: false
+  end
 end
