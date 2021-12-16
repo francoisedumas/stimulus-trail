@@ -9,6 +9,7 @@
     "postcss": "^7",
     "sortablejs": "^1.14.0",
     "stimulus": "^3.0.1",
+    "stimulus-lightbox": "^2.0.0",
     "sweetalert2": "^11.3.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "turbolinks": "^5.2.0",
