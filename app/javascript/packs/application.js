@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import "channels"
 import '../stylesheets/application.scss'
+import "lightgallery.js/dist/css/lightgallery.min.css"
 
 Rails.start()
 Turbolinks.start()
