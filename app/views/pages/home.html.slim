@@ -1,6 +1,6 @@
 h1.main-title Welcome to your Stimulus trail!
 
-p.text-center.mb-10
+p.text-center.mb-10 id="introduction"
   | Find almost 30 exemples of Stimulus real application! Get the code on the repo
   | &nbsp;
   a href="https://github.com/francoisedumas/stimulus-trail" alt="Github" target="_blank"
@@ -10,7 +10,7 @@ p.text-center.mb-10
 
 .line
 
-.card
+.card id="first_day"
   h2.card-title Day-1 Change on click
   = content_tag :div, nil, data: {controller: "hello"} do
     h3.secondary-title data-hello-target="heading" This the first exercise
@@ -47,7 +47,7 @@ p.text-center.mb-10
     li.px-6.py-4.text-center.bg-green-300 Green
 
 
-.flex.flex-col.border-solid.border-white.border-8.mb-5
+.flex.flex-col.border-solid.border-white.border-8.mb-5 id="drum"
   h2.bg-black.text-white.text-center.text-4xl.font-bold.pt-2.pb-2 Day-5 Build a drum
   .drum
     .keys
@@ -197,6 +197,16 @@ p.text-center.mb-10
       .primary-button.mr-5 data-action="click->counter#increment" Increment
       .primary-button.ml-5 data-action="click->counter#decrement" Decrement
 
+
+.card
+  h2.card-title Day-15 Use plug in to do an image gallery
+  small.pb-3.text-sm.italic click a picture below 👇
+  .images data-controller="lightbox"
+    = image_tag "camera_1",  data: { src: "../assets/camera_1.jpg", sub_html: "A GoPro like camera." }
+    = image_tag "camera_2",  data: { src: "../assets/camera_2.jpg", sub_html: "A police like camera." }
+    = image_tag "camera_3",  data: { src: "../assets/camera_3.jpg", sub_html: "A professional like camera." }
+    = image_tag "camera_4",  data: { src: "../assets/camera_4.jpg", sub_html: "A vintage camera." }
+  a href="https://stimulus-components.netlify.app/" alt="Stimulus plug in" target="_blank" more plugins & details here
 
 .line
 
