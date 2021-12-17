@@ -86,6 +86,10 @@ platform is x86_64-linux. Add the current platform to the lockfile with
 It's been solved by removing my Gemfile, bundling and running `bundle lock --add-platform x86_64-linux`
 [A good article about it here](https://www.moncefbelyamani.com/understanding-the-gemfile-lock-file/)
 
+## Solving issue with image on Heroku
+I had an issue `ActionView::Template::Error The asset  is not present in the asset pipeline.` \
+I solved it by changing to true `config.assets.compile = true` \
+[Stackoverflow here](https://stackoverflow.com/questions/49440304/rails-asset-is-not-present-in-asset-pipeline-when-using-image-tag)
 
 ## Deploy & migrate
 
