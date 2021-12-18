@@ -73,7 +73,8 @@ In your terminal \
 
 ## Solving issue with Sqlite3
 
-If using Sqlite3 you have the next error with Heroku `Detected sqlite3 gem which is not supported on Heroku:` To solve it follow the [article here](https://devcenter.heroku.com/articles/sqlite3) or [article here](https://www.codecademy.com/articles/deploy-rails-to-heroku)
+If using Sqlite3 you have the next error with Heroku `Detected sqlite3 gem which is not supported on Heroku:` To solve it follow the [article here](https://devcenter.heroku.com/articles/sqlite3) or [DHH video](https://youtu.be/mpWFrUwAN88) (look about 29min45s) \
+Run `rails db:system:change --to=postgresql` then `bundle`
 
 ## Solving issue with Gemfile.lock
 I had issues with the Gemfile.lock and with the next error
@@ -83,8 +84,10 @@ platform is x86_64-linux. Add the current platform to the lockfile with
 `bundle lock --add-platform x86_64-linux` and try again.
 ```
 
-It's been solved by removing my Gemfile, bundling and running `bundle lock --add-platform x86_64-linux`
-[A good article about it here](https://www.moncefbelyamani.com/understanding-the-gemfile-lock-file/)
+It's been solved by removing my Gemfile, bundling and running `bundle lock --add-platform x86_64-linux` \
+[A good article about it here](https://www.moncefbelyamani.com/understanding-the-gemfile-lock-file/) \
+See also [DHH video](https://youtu.be/mpWFrUwAN88) (look about 30min45s)
+
 
 ## Solving issue with image on Heroku
 I had an issue `ActionView::Template::Error The asset  is not present in the asset pipeline.` \
