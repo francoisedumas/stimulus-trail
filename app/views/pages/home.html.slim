@@ -221,6 +221,22 @@ p.text-center.mb-10 id="introduction"
   h2.card-title Day-17 Countdown to New Year 2021
   h2.text-2xl.font-bold data-controller="countdown" data-countdown-date-value="Dec 30, 2021 23:59:59"
 
+.card
+  h2.card-title Day-18 Build a slider
+  .card__slider data-controller="slider"
+    .card__container data-slider-target="container"
+      = @artists.each do |artist|
+        .card__alone
+          = image_tag("#{artist}.jpeg", class: "avatar-circle avatar-4xl avatar-grow")
+
+          .h5.text-center = artist.capitalize
+
+    .chevron.chevron-right data-action="click->slider#next"
+      . class="fas fa-chevron-right"
+    .chevron.chevron-left data-action="click->slider#prev"
+      . class="fas fa-chevron-left"
+  a.mt-5 href="https://github.com/rodloboz/stimulus-rails" alt="Stimulus slider" target="_blank" more details here
+
 .line
 
 footer.around.my-auto.p-10
