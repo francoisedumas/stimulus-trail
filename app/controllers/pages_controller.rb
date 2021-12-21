@@ -8,6 +8,7 @@ class PagesController < ApplicationController
 
     @vegetables = ["carrot", "seedling", "lemon"]
     @animals = ["horse", "frog", "cat"]
+    @artists = ["jimi", "mark", "santana", "stevie"]
   end
 
   def autocomplete
