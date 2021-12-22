@@ -6,6 +6,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.4.3",
     "autoprefixer": "^9",
+    "marked": "^4.0.8",
     "postcss": "^7",
     "sortablejs": "^1.14.0",
     "stimulus": "^3.0.1",
