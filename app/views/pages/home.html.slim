@@ -267,6 +267,10 @@ p.text-center.mb-10 id="introduction"
       td
       td.finish
 
+.card
+  h2.card-title Day-22 Spin the runner
+  = image_tag("runner.png", data: { controller: "spinner", action: "mousemove->spinner#spinIt", "spinner-target": "runner", })
+
 .line
 
 footer.around.my-auto.p-10
