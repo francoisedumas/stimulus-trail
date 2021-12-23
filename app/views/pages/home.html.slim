@@ -181,7 +181,7 @@ p.text-center.mb-10 id="introduction"
 .card
   h2.card-title Day-13 Drag and drop
   .spread.mt-5
-    ul data = { controller: "drag",  }
+    ul data = { controller: "drag" }
       li.flex.mb-5.p-2.border.border-black
                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="grip-vertical" class="h-5 w-5 mr-2 drag-handler cursor-pointer" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M96 32H32C14.33 32 0 46.33 0 64v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zm0 160H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm0 160H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zM288 32h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zm0 160h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm0 160h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z"></path></svg>
                     | Drag me away!
@@ -249,6 +249,22 @@ p.text-center.mb-10 id="introduction"
     textarea data-action="input->markdown-editor#convertToMarkdown"
     div data-markdown-editor-target="viewer"
   a.mt-5 href="https://marked.js.org/" alt="Stimulus progress bar" target="_blank" more details here
+
+.card
+  h2.card-title Day-21 running game
+  small.pb-3.text-sm.italic Press q to move runner forward
+  table.racer-table data = { controller: "runner", action: "keydown@window->runner#move" }
+    tr id="player-race"
+      td.active
+      td
+      td
+      td
+      td
+      td
+      td
+      td
+      td
+      td.finish
 
 .line
 

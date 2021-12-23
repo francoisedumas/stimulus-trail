@@ -1,0 +1,33 @@
+table tr td {
+  content: "";
+  display: inline-block;
+  vertical-align: top;
+  min-height: 80px;
+  min-width: 80px;
+  border: 1px solid black;
+}
+
+table {
+ margin: auto;
+}
+
+td.active {
+ background-image: image-url('runner.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 80%;
+}
+
+td:last-child {
+ background-image: image-url('finish.png');
+ background-size: cover;
+}
+
+td:last-child.active {
+ background-size: 90%, cover;
+ background-position: center, top left;
+}
+
+#player_race td:last-child.active {
+ background-image: image-url('finish.png'), image-url('runner.png');
+}
