@@ -13,24 +13,27 @@
     @apply flex flex-col items-center border-solid border-white border-8 mb-5 pb-5;
   }
   .inner-card {
-    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-auto w-3/5
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-auto w-3/5;
   }
   .card-title {
-    @apply bg-black text-white text-center text-4xl font-bold pt-2 pb-2 mb-5 w-full
+    @apply bg-black text-white text-center text-4xl font-bold pt-2 pb-2 mb-5 w-full;
   }
   .main-title {
-    @apply text-5xl font-bold text-center mt-2 mb-20
+    @apply text-5xl font-bold text-center mt-2 mb-20;
   }
   .secondary-title {
-    @apply text-center text-2xl font-bold pt-2 pb-2 mb-5
+    @apply text-center text-2xl font-bold pt-2 pb-2 mb-5;
   }
   .primary-button {
-    @apply text-center text-white bg-black hover:bg-white hover:text-black text-sm p-3 mb-5 cursor-pointer rounded-md
+    @apply text-center text-white bg-black hover:bg-white hover:text-black text-sm p-3 mb-5 cursor-pointer rounded-md;
   }
   .spread {
-    @apply flex flex-row justify-center
+    @apply flex flex-row justify-center;
   }
   .around {
-    @apply flex flex-row justify-around w-full
+    @apply flex flex-row justify-around w-full;
+  }
+  .indication {
+    @apply pb-3 text-sm italic;
   }
 }

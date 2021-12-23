@@ -35,6 +35,7 @@ p.text-center.mb-10 id="introduction"
         .hand.hour-hand data = { "clock-target":"hourHand" }
         .hand.min-hand data = { "clock-target":"minHand" }
         .hand.second-hand data = { "clock-target":"secondHand" }
+  a.mt-5 href="https://javascript30.com/" alt="Wes Bos JS30 Stimulus style" target="_blank" Do it full JS Vanilla style with Wes Bos here
 
 
 .card data-controller="togglelist"
@@ -200,7 +201,7 @@ p.text-center.mb-10 id="introduction"
 
 .card
   h2.card-title Day-15 Use plug in to do an image gallery
-  small.pb-3.text-sm.italic click a picture below 👇
+  small.indication click a picture below 👇
   .images data-controller="lightbox"
     = image_tag "camera_1",  data: { src: "../assets/camera_1.jpeg", sub_html: "A GoPro like camera." }
     = image_tag "camera_2",  data: { src: "../assets/camera_2.jpeg", sub_html: "A police like camera." }
@@ -210,7 +211,7 @@ p.text-center.mb-10 id="introduction"
 
 .card
   h2.card-title Day-16 Autocomplete form (with apple related word only ;)
-  small.pb-3.text-sm.italic key apple 👇
+  small.indication key apple 👇
   .max-w-xs.mx.auto.bg-white
     . data-controller="autocomplete" data-autocomplete-url-value="/autocomplete"
       input type="text" class="w-full" data-autocomplete-target="input" placeholder="Type to search..."
@@ -239,12 +240,12 @@ p.text-center.mb-10 id="introduction"
 
 .card
   h2.card-title Day-19 implement a progress bar
-  small.pb-3.text-sm.italic Look up at the progress bar you see since beginning! 👆👆
+  small.indication Look up at the progress bar you see since beginning! 👆👆
   a.mt-5 href="https://stimulus-components.netlify.app/docs/stimulus-scroll-progress/" alt="Stimulus progress bar" target="_blank" more details here
 
 .card
   h2.card-title Day-20 setup markdown editor
-  small.pb-3.text-sm.italic Try with keying **Preview** (with the stars **)
+  small.indication Try with keying **Preview** (with the stars **)
   . data-controller="markdown-editor"
     textarea data-action="input->markdown-editor#convertToMarkdown"
     div data-markdown-editor-target="viewer"
@@ -252,7 +253,7 @@ p.text-center.mb-10 id="introduction"
 
 .card
   h2.card-title Day-21 running game
-  small.pb-3.text-sm.italic Press q to move runner forward
+  small.indication Press q to move runner forward
   table.racer-table data = { controller: "runner", action: "keydown@window->runner#move" }
     tr id="player-race"
       td.active
