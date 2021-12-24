@@ -1,0 +1,76 @@
+
+.scoring-section {
+  text-align: center;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+@media(min-width:768px){
+  .game {
+    width: 600px;
+    height: 150px;
+  }
+}
+
+@media(max-width:767px){
+  .game {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+.hole {
+  /*flex: 1 0 33.33%;*/
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: image-url('dirt.svg') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+@media(min-width:768px){
+  .hole {
+    flex: 1 0 25%;
+  }
+}
+
+@media(max-width:767px){
+  .hole {
+    flex: 1 0 49%;
+  }
+}
+
+.mole {
+  background: image-url('francois.png') bottom center no-repeat;
+  background-size: 70%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
