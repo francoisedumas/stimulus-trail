@@ -271,6 +271,23 @@ p.text-center.mb-10 id="introduction"
   h2.card-title Day-22 Spin the runner
   = image_tag("runner.png", data: { controller: "spinner", action: "mousemove->spinner#spinIt", "spinner-target": "runner", })
 
+.card data-controller="catch"
+  h2.card-title Day-23 Catch me
+  .scoring-section
+    span.score data-catch-target="scoreBoard"
+    button.primary-button data = { action: "click->catch#startGame" }
+      | start
+
+  .game
+    .hole.hole1 data-catch-target="hole"
+      .mole data-action="click->catch#bonk"
+    .hole.hole2 data-catch-target="hole"
+      .mole data-action="click->catch#bonk"
+    .hole.hole3 data-catch-target="hole"
+      .mole data-action="click->catch#bonk"
+    .hole.hole4 data-catch-target="hole"
+      .mole data-action="click->catch#bonk"
+
 .line
 
 footer.around.my-auto.p-10
