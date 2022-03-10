@@ -220,7 +220,7 @@ p.text-center.mb-10 id="introduction"
 
 .card
   h2.card-title Day-17 Countdown to New Year 2021
-  h2.text-2xl.font-bold data-controller="countdown" data-countdown-date-value="Dec 30, 2021 23:59:59"
+  h2.text-2xl.font-bold data-controller="countdown" data-countdown-date-value="Dec 30, 2022 23:59:59"
 
 .card
   h2.card-title Day-18 Build a slider
@@ -289,6 +289,18 @@ p.text-center.mb-10 id="introduction"
       .mole data-action="click->catch#bonk"
   a.mt-5 href="https://javascript30.com/" alt="Wes Bos JS30 Stimulus style" target="_blank" Do it full JS Vanilla style with Wes Bos here
 
+
+.card
+  h2.card-title Day-23 dynamic form
+  section.inner-card
+    = form_tag root_path, data: { controller: "dynamic-form" } do
+      = select_tag :vegetables, options_for_select(@vegetables.collect {|v| [v, v]}), {include_blank: false}
+    / = form_with model: @city, url: admin_city_path(@city), html: { method: :patch } do |f|
+    /       = f.select :urgences,  options_for_select(@urgence_choices, @city.urgences.collect {|d| d.id }), {include_blank: false}, multiple: true, class: 'input-bici-select-2'
+    / = form_tag root_path(anchor: "calendar"), method: :get, data: { controller: "form-submit" } do
+    /   = date_field_tag :date,
+    /     params[:date],
+    /     data: { action: "change->form-submit#handleChange" }
 .line
 
 footer.around.my-auto.p-10
